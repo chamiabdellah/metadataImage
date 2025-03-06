@@ -99,3 +99,10 @@ export default function Home() {
     </div>
   );
 }
+
+
+export const metadata: Metadata = {
+  title: 'Unsere HSE Creator',
+  description:
+    'Für unsere Livestreams stehen die beliebtesten Persönlichkeiten und ausgesprochene Experten vor der Kamera. Jetzt unsere HSE Creator entdecken',
+}
