@@ -98,7 +98,7 @@ export const metadata: Metadata = {
   openGraph: {
     images: [
       {
-        url: 'https://www.hse.de/dpl/cf/gxqzdlfn45nk/44EPUSQHGsQqPZY9CxdkPq/095e31f8ae9c7a616461b2408f95c374/mod_14994_modewinter_bannermakeover_mc_20240801_navigationlayer_desk_2x.jpg?impolicy=content-view-policy&imwidth=640', // Path relative to the public directory
+        url: '',//'https://www.hse.de/dpl/cf/gxqzdlfn45nk/44EPUSQHGsQqPZY9CxdkPq/095e31f8ae9c7a616461b2408f95c374/mod_14994_modewinter_bannermakeover_mc_20240801_navigationlayer_desk_2x.jpg?impolicy=content-view-policy&imwidth=640', // Path relative to the public directory
       },
     ],
   },
