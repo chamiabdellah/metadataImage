@@ -86,33 +86,60 @@ export default function Home() {
   );
 }
 
+const videoData = {
+  id: "22b8f503-bd36-4526-8b22-1778cc3a7739",
+  title: "HSE Business School: Introduction to Finance - Course Preview",
+  description: "This comprehensive introduction covers fundamental financial concepts, investment strategies, and market analysis techniques designed for business students and professionals alike.",
+  videoUrl: "https://www.hse.de/dpl/files/streamer/streamer/2a8bde0d-594b-439c-a2a3-04426a933407/video-posts-processed/22b8f503-bd36-4526-8b22-1778cc3a7739/1080/2025_04_03_20_11_13_04f3a103b7654e99962d5170e620dbd4_preview.mp4#t=0.001",
+  thumbnailUrl: "https://www.hse.de/images/course-previews/finance-intro-thumbnail.jpg", // Replace with actual thumbnail
+  duration: "5:27",
+  instructor: "Prof. Anna Schmidt",
+  publishedAt: "2025-04-03",
+  width: 1920,
+  height: 1080,
+  tags: ["finance", "business", "education", "hse"]
+}
 
-export const metadata: Metadata = {
-  title: 'Unsere HSE Creator',
-  description:
-    'Für unsere Livestreams stehen die beliebtesten Persönlichkeiten und ausgesprochene Experten vor der Kamera. Jetzt unsere HSE Creator entdecken',
-  appleWebApp: {
-    startupImage: "https://www.hse.de/dpl/cf/gxqzdlfn45nk/44EPUSQHGsQqPZY9CxdkPq/095e31f8ae9c7a616461b2408f95c374/mod_14994_modewinter_bannermakeover_mc_20240801_navigationlayer_desk_2x.jpg?impolicy=content-view-policy&imwidth=640"
-  },
-  assets: [
-    "https://www.hse.de/dpl/cf/gxqzdlfn45nk/44EPUSQHGsQqPZY9CxdkPq/095e31f8ae9c7a616461b2408f95c374/mod_14994_modewinter_bannermakeover_mc_20240801_navigationlayer_desk_2x.jpg?impolicy=content-view-policy&imwidth=640",
-    'https://www.hse.de/dpl/files/streamer/streamer/2a8bde0d-594b-439c-a2a3-04426a933407/video-posts-processed/22b8f503-bd36-4526-8b22-1778cc3a7739/1080/2025_04_03_20_11_13_04f3a103b7654e99962d5170e620dbd4_preview.mp4#t=0.001',
-  ],
-  openGraph: {
-    type: 'video.other',
-    images: [
-       {
-         url: 'https://www.hse.de/dpl/cf/gxqzdlfn45nk/44EPUSQHGsQqPZY9CxdkPq/095e31f8ae9c7a616461b2408f95c374/mod_14994_modewinter_bannermakeover_mc_20240801_navigationlayer_desk_2x.jpg?impolicy=content-view-policy&imwidth=640', // Path relative to the public directory
-       },
-     ],
-    videos: [
-      {
-      url: 'https://www.hse.de/dpl/files/streamer/streamer/2a8bde0d-594b-439c-a2a3-04426a933407/video-posts-processed/22b8f503-bd36-4526-8b22-1778cc3a7739/1080/2025_04_03_20_11_13_04f3a103b7654e99962d5170e620dbd4_preview.mp4#t=0.001',
-        secureUrl: 'https://www.hse.de/dpl/files/streamer/streamer/2a8bde0d-594b-439c-a2a3-04426a933407/video-posts-processed/22b8f503-bd36-4526-8b22-1778cc3a7739/1080/2025_04_03_20_11_13_04f3a103b7654e99962d5170e620dbd4_preview.mp4#t=0.001',
-        width: 1280,
-        height: 720,
-        type: 'video/mp4',
-    }
-    ]
-  },
+export async function generateMetadata() {
+  // In a real app, you would fetch this data
+  // const videoData = await getVideoData(params.videoId)
+
+  const domain = process.env.NEXT_PUBLIC_DOMAIN || 'https://courses.hse.de'
+
+  return {
+    title: videoData.title,
+    description: videoData.description,
+    openGraph: {
+      title: videoData.title,
+      description: videoData.description,
+      type: 'video.other',
+      videos: [
+        {
+          url: videoData.videoUrl,
+          secure_url: videoData.videoUrl,
+          width: videoData.width,
+          height: videoData.height,
+          type: 'video/mp4',
+        },
+      ],
+      url: `${domain}/videos/course-preview`,
+      siteName: 'HSE Business School',
+      images: [
+        {
+          url: videoData.thumbnailUrl,
+          width: 1200,
+          height: 630,
+          alt: `${videoData.title} - Taught by ${videoData.instructor}`,
+        },
+      ],
+    },
+    // Additional metadata for Twitter
+    twitter: {
+      card: 'player',
+      site: '@HSEBusinessSchool',
+      title: videoData.title,
+      description: videoData.description,
+      images: [videoData.thumbnailUrl],
+    },
+  }
 }
