@@ -87,8 +87,8 @@ export default function Home() {
 
 const videoData = {
   id: "22b8f503-bd36-4526-8b22-1778cc3a7739",
-  title: "HSE Business School: Introduction to Finance - Course Preview",
-  description: "This comprehensive introduction covers fundamental financial concepts, investment strategies, and market analysis techniques designed for business students and professionals alike.",
+  title: "HSE Video Preview",
+  description: "This test page should shows a preview of the video",
   videoUrl: "https://www.hse.de/dpl/files/streamer/streamer/2a8bde0d-594b-439c-a2a3-04426a933407/video-posts-processed/22b8f503-bd36-4526-8b22-1778cc3a7739/1080/2025_04_03_20_11_13_04f3a103b7654e99962d5170e620dbd4_preview.mp4#t=0.001",
   thumbnailUrl: "https://th.bing.com/th/id/OIP.escF_r0xxbHdnM153PwyZAHaE7?rs=1&pid=ImgDetMain", // Replace with actual thumbnail
   duration: "5:27",
@@ -96,7 +96,7 @@ const videoData = {
   publishedAt: "2025-04-03",
   width: 1920,
   height: 1080,
-  tags: ["finance", "business", "education", "hse"]
+  tags: ["hse"]
 }
 
 export async function generateMetadata() {
