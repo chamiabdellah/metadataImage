@@ -111,10 +111,6 @@ const videoData = {
 }
 
 export async function generateMetadata(): Promise<Metadata> {
-  // In a real app, you would fetch this data
-  // const videoData = await getVideoData(params.videoId)
-
-  const domain = process.env.NEXT_PUBLIC_DOMAIN || 'https://courses.hse.de'
 
   return {
     title: videoData.title,
@@ -138,7 +134,7 @@ export async function generateMetadata(): Promise<Metadata> {
           type: 'video/mp4',
         },
       ],
-      url: `${domain}/videos/course-preview`,
+      url: videoData.videoUrl,
       siteName: 'HSE',
       images: [
         {
