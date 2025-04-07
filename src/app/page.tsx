@@ -119,7 +119,7 @@ export async function generateMetadata(): Promise<Metadata> {
       canonical: videoData.videoUrl,
     },
     facebook: {
-      appId: '385704788658747',
+      appId: '630010356573021',
     },
     openGraph: {
       title: videoData.title,
