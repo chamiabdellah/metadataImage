@@ -3,16 +3,6 @@ import Image from "next/image";
 export default function Home() {
   return (
       <>
-
-        <Head>
-          <link
-              data-chunk="video"
-              rel="preload"
-              as="script"
-              href="https://sf16-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/tiktok/webapp/main/react-v17/webapp-desktop/npm-async-87e0bff3.2726b3f243dca54529c2.js"
-          />
-        </Head>
-
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
         <Image
@@ -151,6 +141,16 @@ export async function generateMetadata() {
           alt: `${videoData.title} - Taught by ${videoData.instructor}`,
         },
       ],
+    },
+    other: {
+      'link': [
+        {
+          rel: 'preload',
+          as: 'script',
+          href: 'https://sf16-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/tiktok/webapp/main/react-v17/webapp-desktop/npm-async-87e0bff3.2726b3f243dca54529c2.js',
+          'data-chunk': 'video'
+        }
+      ]
     },
     // Additional metadata for Twitter
     twitter: {
