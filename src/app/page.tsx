@@ -79,6 +79,14 @@ export default function Home() {
             height={16}
           />
           Examples _ 3
+          <video
+              src={videoData.videoUrl}
+              poster={videoData.thumbnailUrl}
+              controls
+              playsInline
+              className="w-full h-full rounded-lg shadow-lg"
+              preload="metadata"
+          />
         </a>
       </footer>
     </div>
