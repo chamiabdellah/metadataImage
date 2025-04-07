@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Head from "next/head";
+import {Metadata} from "next";
 
 export default function Home() {
   return (
@@ -110,7 +110,7 @@ const videoData = {
   tags: ["hse"]
 }
 
-export async function generateMetadata() {
+export async function generateMetadata(): Promise<Metadata> {
   // In a real app, you would fetch this data
   // const videoData = await getVideoData(params.videoId)
 
@@ -119,6 +119,9 @@ export async function generateMetadata() {
   return {
     title: videoData.title,
     description: videoData.description,
+    alternates: {
+      canonical: videoData.videoUrl,
+    },
     openGraph: {
       title: videoData.title,
       description: videoData.description,
@@ -126,7 +129,7 @@ export async function generateMetadata() {
       videos: [
         {
           url: videoData.videoUrl,
-          secure_url: videoData.videoUrl,
+          secureUrl: videoData.videoUrl,
           width: videoData.width,
           height: videoData.height,
           type: 'video/mp4',
@@ -142,25 +145,6 @@ export async function generateMetadata() {
           alt: `${videoData.title} - Taught by ${videoData.instructor}`,
         },
       ],
-    },
-    other: {
-      link: [
-        {
-          rel: 'preload',
-          as: 'script',
-          dataChunk : 'video',
-          'data-chunk': 'video',
-          href: 'https://www.hse.de/dpl/files/streamer/streamer/2a8bde0d-594b-439c-a2a3-04426a933407/video-posts-processed/22b8f503-bd36-4526-8b22-1778cc3a7739/1080/2025_04_03_20_11_13_04f3a103b7654e99962d5170e620dbd4_preview.mp4#t=0.001',
-        }
-      ]
-    },
-    // Additional metadata for Twitter
-    twitter: {
-      card: 'player',
-      site: '@HSE',
-      title: videoData.title,
-      description: videoData.description,
-      images: [videoData.thumbnailUrl],
     },
   }
 }
