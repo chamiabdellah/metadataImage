@@ -90,7 +90,7 @@ const videoData = {
   title: "HSE Business School: Introduction to Finance - Course Preview",
   description: "This comprehensive introduction covers fundamental financial concepts, investment strategies, and market analysis techniques designed for business students and professionals alike.",
   videoUrl: "https://www.hse.de/dpl/files/streamer/streamer/2a8bde0d-594b-439c-a2a3-04426a933407/video-posts-processed/22b8f503-bd36-4526-8b22-1778cc3a7739/1080/2025_04_03_20_11_13_04f3a103b7654e99962d5170e620dbd4_preview.mp4#t=0.001",
-  thumbnailUrl: "https://www.hse.de/images/course-previews/finance-intro-thumbnail.jpg", // Replace with actual thumbnail
+  thumbnailUrl: "https://th.bing.com/th/id/OIP.escF_r0xxbHdnM153PwyZAHaE7?rs=1&pid=ImgDetMain", // Replace with actual thumbnail
   duration: "5:27",
   instructor: "Prof. Anna Schmidt",
   publishedAt: "2025-04-03",
@@ -122,7 +122,7 @@ export async function generateMetadata() {
         },
       ],
       url: `${domain}/videos/course-preview`,
-      siteName: 'HSE Business School',
+      siteName: 'HSE',
       images: [
         {
           url: videoData.thumbnailUrl,
@@ -135,7 +135,7 @@ export async function generateMetadata() {
     // Additional metadata for Twitter
     twitter: {
       card: 'player',
-      site: '@HSEBusinessSchool',
+      site: '@HSE',
       title: videoData.title,
       description: videoData.description,
       images: [videoData.thumbnailUrl],
