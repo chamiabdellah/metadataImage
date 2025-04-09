@@ -80,7 +80,7 @@ export default function Home() {
             width={16}
             height={16}
           />
-          Examples _ 39
+          Examples _ 40
         </a>
         <video
             src={'https://metadata-image.vercel.app/prev.mp4'}
@@ -123,13 +123,13 @@ export async function generateMetadata(): Promise<Metadata> {
       title: videoData.title,
       description: videoData.description,
       type: 'video.other',
-      videos: [{
+    /*  videos: [{
             url: 'https://metadata-image.vercel.app/prev.mp4',
             secureUrl: videoData.videoUrl,
             width: videoData.width,
             height: videoData.height,
             type: 'video/mp4',
-          }],
+          }],*/
       siteName: 'HSE',
       images: [{
           url: 'https://metadata-image.vercel.app/previ_img.png',
@@ -137,10 +137,11 @@ export async function generateMetadata(): Promise<Metadata> {
           height: 630,
           alt: `${videoData.title} - Taught by Me`,
         }],
-      url: 'https://metadata-image.vercel.app/prev.mp4',
+      url: 'https://metadata-image.vercel.app',
     },
     other: {
-      'og:image': 'https://metadata-image.vercel.app/previ_img.png'
+      'og:video:url': 'https://metadata-image.vercel.app/prev.mp4',
+      'og:video:secure_url': 'https://metadata-image.vercel.app/prev.mp4',
     }
   }
 }
