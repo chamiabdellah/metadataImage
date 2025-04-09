@@ -80,7 +80,7 @@ export default function Home() {
             width={16}
             height={16}
           />
-          Examples _ 21
+          Examples _ 22
         </a>
         <video
             src={'https://metadata-image.vercel.app/prev.mp4'}
@@ -99,7 +99,7 @@ const videoData = {
   title: "HSE Video Preview",
   description: "This test page should shows a preview of the video",
   videoUrl: "https://metadata-image.vercel.app/prev.mp4",
-  thumbnailUrl: "https://www.hse.de/dpl/files/streamer/streamer/c6a79dce-e2a7-458a-a849-6f1d9ccb7cc1/show/8620cbfc-61f8-4680-a133-90f251bb8fba/preview-Dz5S.jpeg",
+  thumbnailUrl: "https://metadata-image.vercel.app/previ_img.png",
   duration: "5:27",
   publishedAt: "2025-04-03",
   width: 1920,
