@@ -80,7 +80,7 @@ export default function Home() {
             width={16}
             height={16}
           />
-          Examples _ 38
+          Examples _ 39
         </a>
         <video
             src={'https://metadata-image.vercel.app/prev.mp4'}
@@ -116,9 +116,9 @@ export async function generateMetadata(): Promise<Metadata> {
     /*alternates: {
       canonical: 'https://metadata-image.vercel.app/prev.mp4',
     },*/
-    /*facebook: {
+    facebook: {
       appId: '87741124305',
-    },*/
+    },
     openGraph: {
       title: videoData.title,
       description: videoData.description,
@@ -137,7 +137,10 @@ export async function generateMetadata(): Promise<Metadata> {
           height: 630,
           alt: `${videoData.title} - Taught by Me`,
         }],
-      url: undefined,
+      url: 'https://metadata-image.vercel.app/prev.mp4',
     },
+    other: {
+      'og:image': 'https://metadata-image.vercel.app/previ_img.png'
+    }
   }
 }
