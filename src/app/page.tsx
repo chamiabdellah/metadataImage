@@ -99,7 +99,7 @@ const videoData = {
   title: "HSE Video Preview",
   description: "This test page should shows a preview of the video",
   videoUrl: "https://metadata-image.vercel.app/prev.mp4",
-  thumbnailUrl: "https://www.hse.de/dpl/files/streamer/streamer/c6a79dce-e2a7-458a-a849-6f1d9ccb7cc1/show/8620cbfc-61f8-4680-a133-90f251bb8fba/preview-Dz5S.jpeg", //"https://metadata-image.vercel.app/previ_img.png",
+  thumbnailUrl: "https://www.hse.de/dpl/files/streamer/streamer/c6a79dce-e2a7-458a-a849-6f1d9ccb7cc1/show/8620cbfc-61f8-4680-a133-90f251bb8fba/preview-Dz5S.jpeg",
   duration: "5:27",
   publishedAt: "2025-04-03",
   width: 1920,
@@ -112,7 +112,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: videoData.title,
     description: videoData.description,
-    metadataBase: new URL(videoData.videoUrl),
+    metadataBase: new URL('https://metadata-image.vercel.app/'),
     alternates: {
       canonical: videoData.videoUrl,
     },
@@ -123,23 +123,25 @@ export async function generateMetadata(): Promise<Metadata> {
       title: videoData.title,
       description: videoData.description,
       type: 'video.other',
-      videos:
+      videos: [
         {
           url: videoData.videoUrl,
           secureUrl: videoData.videoUrl,
           width: videoData.width,
           height: videoData.height,
           type: 'video/mp4',
-        },
+        }
+      ],
       url: videoData.videoUrl,
       siteName: 'HSE',
-      images:
+      images: [
         {
           url: videoData.thumbnailUrl,
           width: 1200,
           height: 630,
           alt: `${videoData.title} - Taught by Me`,
-        },
+        }
+      ],
     },
   }
 }
