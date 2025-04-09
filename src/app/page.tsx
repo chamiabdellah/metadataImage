@@ -80,7 +80,7 @@ export default function Home() {
             width={16}
             height={16}
           />
-          Examples _ 10
+          Examples _ 11
         </a>
         <video
             src={'https://www.hse.de/dpl/files/streamer/streamer/2a8bde0d-594b-439c-a2a3-04426a933407/video-posts-processed/22b8f503-bd36-4526-8b22-1778cc3a7739/1080/2025_04_03_20_11_13_04f3a103b7654e99962d5170e620dbd4_preview.mp4'}
@@ -116,6 +116,7 @@ export async function generateMetadata(): Promise<Metadata> {
     metadataBase: new URL(videoData.videoUrl),
     alternates: {
       canonical: videoData.videoUrl,
+      medias: {}
     },
     facebook: {
       appId: '87741124305',
@@ -124,7 +125,7 @@ export async function generateMetadata(): Promise<Metadata> {
       title: videoData.title,
       description: videoData.description,
       type: 'video.other',
-      videos: [
+      videos:
         {
           url: videoData.videoUrl,
           secureUrl: videoData.videoUrl,
@@ -132,7 +133,6 @@ export async function generateMetadata(): Promise<Metadata> {
           height: videoData.height,
           type: 'video/mp4',
         },
-      ],
       url: videoData.videoUrl,
       siteName: 'HSE',
       images: [
