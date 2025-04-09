@@ -116,9 +116,9 @@ export async function generateMetadata(): Promise<Metadata> {
     /*alternates: {
       canonical: 'https://metadata-image.vercel.app/prev.mp4',
     },*/
-    facebook: {
+    /*facebook: {
       appId: '87741124305',
-    },
+    },*/
     openGraph: {
       title: videoData.title,
       description: videoData.description,
