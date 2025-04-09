@@ -113,9 +113,9 @@ export async function generateMetadata(): Promise<Metadata> {
     title: videoData.title,
     description: videoData.description,
     //metadataBase: new URL('https://metadata-image.vercel.app/'),
-    /*alternates: {
+    alternates: {
       canonical: videoData.videoUrl,
-    },*/
+    },
     facebook: {
       appId: '87741124305',
     },
