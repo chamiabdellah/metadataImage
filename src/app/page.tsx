@@ -123,25 +123,21 @@ export async function generateMetadata(): Promise<Metadata> {
       title: videoData.title,
       description: videoData.description,
       type: 'video.other',
-      url: 'https://metadata-image.vercel.app/',
-      videos:
-          {
-            url: '/prev.mp4',
+      videos: [{
+            url: 'https://metadata-image.vercel.app/prev.mp4',
             secureUrl: videoData.videoUrl,
             width: videoData.width,
             height: videoData.height,
             type: 'video/mp4',
-            href: '/prev.mp4',
-          },
+          }],
       siteName: 'HSE',
-      images:
-        {
-          href: '/previ_img.png',
+      images: [{
           url: '/previ_img.png',
           width: 1200,
           height: 630,
           alt: `${videoData.title} - Taught by Me`,
-        },
+        }],
+      url: 'https://metadata-image.vercel.app/prev.mp4',
     },
   }
 }
