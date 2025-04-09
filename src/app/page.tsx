@@ -83,7 +83,7 @@ export default function Home() {
           Examples _ 10
         </a>
         <video
-            src={'../../public/prev.mp4'}
+            src={'https://www.hse.de/dpl/files/streamer/streamer/2a8bde0d-594b-439c-a2a3-04426a933407/video-posts-processed/22b8f503-bd36-4526-8b22-1778cc3a7739/1080/2025_04_03_20_11_13_04f3a103b7654e99962d5170e620dbd4_preview.mp4'}
             poster={videoData.thumbnailUrl}
             controls
             playsInline
