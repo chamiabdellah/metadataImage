@@ -80,7 +80,7 @@ export default function Home() {
             width={16}
             height={16}
           />
-          Examples _ 24
+          Examples _ 25
         </a>
         <video
             src={'https://metadata-image.vercel.app/prev.mp4'}
@@ -133,14 +133,13 @@ export async function generateMetadata(): Promise<Metadata> {
         },
       url: "https://metadata-image.vercel.app",
       siteName: 'HSE',
-      images: [
+      images:
         {
           url: videoData.thumbnailUrl,
           width: 1200,
           height: 630,
           alt: `${videoData.title} - Taught by Me`,
-        }
-      ],
+        },
     },
   }
 }
