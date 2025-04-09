@@ -80,7 +80,7 @@ export default function Home() {
             width={16}
             height={16}
           />
-          Examples _ 18
+          Examples _ 19
         </a>
         <video
             src={'https://metadata-image.vercel.app/prev.mp4'}
