@@ -80,7 +80,7 @@ export default function Home() {
             width={16}
             height={16}
           />
-          Examples _ 9
+          Examples _ 10
         </a>
         <video
             src={'../../public/prev.mp4'}
