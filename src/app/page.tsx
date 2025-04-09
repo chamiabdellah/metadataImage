@@ -113,6 +113,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: videoData.title,
     description: videoData.description,
+    metadataBase: new URL(videoData.videoUrl),
     alternates: {
       canonical: videoData.videoUrl,
     },
