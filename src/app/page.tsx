@@ -96,7 +96,6 @@ export default function Home() {
 }
 
 const videoData = {
-  id: "22b8f503-bd36-4526-8b22-1778cc3a7739",
   title: "HSE Video Preview",
   description: "This test page should shows a preview of the video",
   videoUrl: "https://metadata-image.vercel.app/prev.mp4",
@@ -134,14 +133,13 @@ export async function generateMetadata(): Promise<Metadata> {
         },
       url: videoData.videoUrl,
       siteName: 'HSE',
-      images: [
+      images:
         {
           url: videoData.thumbnailUrl,
           width: 1200,
           height: 630,
           alt: `${videoData.title} - Taught by Me`,
         },
-      ],
     },
   }
 }
