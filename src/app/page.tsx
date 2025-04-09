@@ -80,7 +80,7 @@ export default function Home() {
             width={16}
             height={16}
           />
-          Examples _ 8
+          Examples _ 9
         </a>
         <video
             src={'../../public/prev.mp4'}
@@ -133,15 +133,15 @@ export async function generateMetadata(): Promise<Metadata> {
         },
       ],
       url: videoData.videoUrl,
-      /*siteName: 'HSE',
+      siteName: 'HSE',
       images: [
         {
           url: videoData.thumbnailUrl,
           width: 1200,
           height: 630,
-          alt: `${videoData.title} - Taught by ${videoData.instructor}`,
+          alt: `${videoData.title} - Taught by Me`,
         },
-      ],*/
+      ],
     },
   }
 }
