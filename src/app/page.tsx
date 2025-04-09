@@ -80,16 +80,15 @@ export default function Home() {
             width={16}
             height={16}
           />
-          Examples _ 6
-          <video
-              src={videoData.videoUrl}
-              poster={videoData.thumbnailUrl}
-              controls
-              playsInline
-              className="w-full h-full rounded-lg shadow-lg"
-              preload="metadata"
-          />
+          Examples _ 7
         </a>
+        <video
+            src={'../../public/prev.mp4'}
+            poster={videoData.thumbnailUrl}
+            controls
+            playsInline
+            className="w-full h-full rounded-lg shadow-lg"
+        />
       </footer>
     </div>
         </>
@@ -100,10 +99,9 @@ const videoData = {
   id: "22b8f503-bd36-4526-8b22-1778cc3a7739",
   title: "HSE Video Preview",
   description: "This test page should shows a preview of the video",
-  videoUrl: "https://www.youtube.com/watch?v=eEap1NAtY5Q",
+  videoUrl: "https://www.hse.de/dpl/files/streamer/streamer/2a8bde0d-594b-439c-a2a3-04426a933407/video-posts-processed/22b8f503-bd36-4526-8b22-1778cc3a7739/1080/2025_04_03_20_11_13_04f3a103b7654e99962d5170e620dbd4_preview.mp4",
   thumbnailUrl: "https://th.bing.com/th/id/OIP.escF_r0xxbHdnM153PwyZAHaE7?rs=1&pid=ImgDetMain", // Replace with actual thumbnail
   duration: "5:27",
-  instructor: "Prof. Anna Schmidt",
   publishedAt: "2025-04-03",
   width: 1920,
   height: 1080,
@@ -116,10 +114,10 @@ export async function generateMetadata(): Promise<Metadata> {
     title: videoData.title,
     description: videoData.description,
     alternates: {
-      canonical: 'https://www.youtube.com/watch?v=eEap1NAtY5Q',
+      canonical: videoData.videoUrl,
     },
     facebook: {
-      appId: '630010356573021',
+      appId: '87741124305',
     },
     openGraph: {
       title: videoData.title,
@@ -135,8 +133,7 @@ export async function generateMetadata(): Promise<Metadata> {
         },
       ],
       url: videoData.videoUrl,
-      siteName: 'HSE',
-
+      /*siteName: 'HSE',
       images: [
         {
           url: videoData.thumbnailUrl,
@@ -144,7 +141,7 @@ export async function generateMetadata(): Promise<Metadata> {
           height: 630,
           alt: `${videoData.title} - Taught by ${videoData.instructor}`,
         },
-      ],
+      ],*/
     },
   }
 }
