@@ -136,6 +136,7 @@ export async function generateMetadata(): Promise<Metadata> {
       siteName: 'HSE',
       images:
         {
+          href: 'https://i.ytimg.com/vi/eEap1NAtY5Q/maxresdefault.jpg',
           url: 'https://i.ytimg.com/vi/eEap1NAtY5Q/maxresdefault.jpg',
           width: 1200,
           height: 630,
