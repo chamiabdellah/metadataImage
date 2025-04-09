@@ -132,7 +132,7 @@ export async function generateMetadata(): Promise<Metadata> {
           type: 'video/mp4',
         }
       ],
-      url: videoData.videoUrl,
+      url: "https://metadata-image.vercel.app/",
       siteName: 'HSE',
       images: [
         {
