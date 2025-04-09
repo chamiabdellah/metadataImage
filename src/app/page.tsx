@@ -80,10 +80,10 @@ export default function Home() {
             width={16}
             height={16}
           />
-          Examples _ 16
+          Examples _ 9
         </a>
         <video
-            src={'https://metadata-image.vercel.app/prev.mp4'}
+            src={'../../public/prev.mp4'}
             poster={videoData.thumbnailUrl}
             controls
             playsInline
@@ -96,10 +96,11 @@ export default function Home() {
 }
 
 const videoData = {
+  id: "22b8f503-bd36-4526-8b22-1778cc3a7739",
   title: "HSE Video Preview",
   description: "This test page should shows a preview of the video",
-  videoUrl: "https://metadata-image.vercel.app/prev.mp4",
-  thumbnailUrl: "https://www.hse.de/dpl/files/streamer/streamer/c6a79dce-e2a7-458a-a849-6f1d9ccb7cc1/show/8620cbfc-61f8-4680-a133-90f251bb8fba/preview-Dz5S.jpeg",
+  videoUrl: "https://www.hse.de/dpl/files/streamer/streamer/2a8bde0d-594b-439c-a2a3-04426a933407/video-posts-processed/22b8f503-bd36-4526-8b22-1778cc3a7739/1080/2025_04_03_20_11_13_04f3a103b7654e99962d5170e620dbd4_preview.mp4",
+  thumbnailUrl: "https://th.bing.com/th/id/OIP.escF_r0xxbHdnM153PwyZAHaE7?rs=1&pid=ImgDetMain", // Replace with actual thumbnail
   duration: "5:27",
   publishedAt: "2025-04-03",
   width: 1920,
@@ -112,7 +113,6 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: videoData.title,
     description: videoData.description,
-    metadataBase: new URL('https://metadata-image.vercel.app/'),
     alternates: {
       canonical: videoData.videoUrl,
     },
@@ -130,7 +130,7 @@ export async function generateMetadata(): Promise<Metadata> {
           width: videoData.width,
           height: videoData.height,
           type: 'video/mp4',
-        }
+        },
       ],
       url: videoData.videoUrl,
       siteName: 'HSE',
@@ -140,7 +140,7 @@ export async function generateMetadata(): Promise<Metadata> {
           width: 1200,
           height: 630,
           alt: `${videoData.title} - Taught by Me`,
-        }
+        },
       ],
     },
   }
