@@ -3,7 +3,7 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
     webpack(config) {
         config.module.rules.push({
-            test: /\.(mp4|webm|ogg|mp3|wav|flac|aac|rtf|doc|docx)$/,
+            test: /\.(mp4|webm|ogg|mp3|wav|flac|aac|png|doc|docx)$/,
             use: {
                 loader: 'file-loader',
                 options: {
