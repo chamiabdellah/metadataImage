@@ -116,7 +116,6 @@ export async function generateMetadata(): Promise<Metadata> {
     metadataBase: new URL(videoData.videoUrl),
     alternates: {
       canonical: videoData.videoUrl,
-      medias: {}
     },
     facebook: {
       appId: '87741124305',
