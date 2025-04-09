@@ -115,15 +115,15 @@ export async function generateMetadata(): Promise<Metadata> {
     metadataBase: new URL('https://metadata-image.vercel.app/'),
     alternates: {
       canonical: videoData.videoUrl,
-    },*/
-   /* facebook: {
+    },
+    facebook: {
       appId: '87741124305',
-    },*/
+    },
     openGraph: {
       title: videoData.title,
       description: videoData.description,
-      //type: 'video.other',
-      /*videos: [
+      type: 'video.other',
+      videos: [
         {
           url: videoData.videoUrl,
           secureUrl: videoData.videoUrl,
