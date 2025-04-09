@@ -130,14 +130,14 @@ export async function generateMetadata(): Promise<Metadata> {
           width: videoData.width,
           height: videoData.height,
           type: 'video/mp4',
-          href: videoData.videoUrl,
+          href: '/prev.mp4',
         },
       url: videoData.videoUrl,
       siteName: 'HSE',
       images:
         {
-          href: 'https://i.ytimg.com/vi/eEap1NAtY5Q/maxresdefault.jpg',
-          url: 'https://i.ytimg.com/vi/eEap1NAtY5Q/maxresdefault.jpg',
+          href: '/previ_img.png',
+          url: '/previ_img.png',
           width: 1200,
           height: 630,
           alt: `${videoData.title} - Taught by Me`,
