@@ -80,7 +80,7 @@ export default function Home() {
             width={16}
             height={16}
           />
-          Examples _ 42
+          Examples _ 43
         </a>
         <video
             src={'https://metadata-image.vercel.app/prev.mp4'}
@@ -112,9 +112,9 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: videoData.title,
     description: videoData.description,
-    metadataBase: new URL('https://metadata-image.vercel.app/'),
+    //metadataBase: new URL('https://metadata-image.vercel.app/'),
     alternates: {
-      canonical: 'https://metadata-image.vercel.app/prev.mp4',
+      canonical: 'https://metadata-image.vercel.app',
       media: {title: "direct Link", url: "https://metadata-image.vercel.app/prev.mp4"}
     },
     facebook: {
@@ -143,8 +143,6 @@ export async function generateMetadata(): Promise<Metadata> {
     other: {
       'og:video:url': 'https://metadata-image.vercel.app/prev.mp4',
       'og:video:secure_url': 'https://metadata-image.vercel.app/prev.mp4',
-      'og:url': 'https://metadata-image.vercel.app',
-      'og:image': 'https://metadata-image.vercel.app/previ_img.png',
     }
   }
 }
