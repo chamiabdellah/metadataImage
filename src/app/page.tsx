@@ -138,7 +138,7 @@ export async function generateMetadata(): Promise<Metadata> {
           height: 630,
           alt: `${videoData.title} - Taught by Me`,
         }],
-      url: 'https://metadata-image.vercel.app/prev.mp4',
+      url: 'https://metadata-image.vercel.app/*',
     },
     other: {
       'og:video:url': 'https://metadata-image.vercel.app/prev.mp4',
