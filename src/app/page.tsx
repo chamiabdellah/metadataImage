@@ -1,8 +1,9 @@
-import { Metadata } from "next";
 import Image from "next/image";
+import {Metadata} from "next";
 
 export default function Home() {
   return (
+      <>
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
         <Image
@@ -79,10 +80,18 @@ export default function Home() {
             width={16}
             height={16}
           />
-          Examples
+          Examples _ 43
         </a>
+        <video
+            src={'https://metadata-image.vercel.app/prev.mp4'}
+            poster={videoData.thumbnailUrl}
+            controls
+            playsInline
+            className="w-full h-full rounded-lg shadow-lg"
+        />
       </footer>
     </div>
+        </>
   );
 }
 
@@ -91,6 +100,10 @@ export const metadata: Metadata = {
   title: 'Unsere HSE Creator',
   description:
     'Für unsere Livestreams stehen die beliebtesten Persönlichkeiten und ausgesprochene Experten vor der Kamera. Jetzt unsere HSE Creator entdecken',
+  appleWebApp: {
+    startupImage: "https://www.hse.de/dpl/cf/gxqzdlfn45nk/44EPUSQHGsQqPZY9CxdkPq/095e31f8ae9c7a616461b2408f95c374/mod_14994_modewinter_bannermakeover_mc_20240801_navigationlayer_desk_2x.jpg?impolicy=content-view-policy&imwidth=640"
+  },
+  assets: ["https://www.hse.de/dpl/cf/gxqzdlfn45nk/44EPUSQHGsQqPZY9CxdkPq/095e31f8ae9c7a616461b2408f95c374/mod_14994_modewinter_bannermakeover_mc_20240801_navigationlayer_desk_2x.jpg?impolicy=content-view-policy&imwidth=640"],
   openGraph: {
     images: [
       {
