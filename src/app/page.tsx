@@ -95,20 +95,54 @@ export default function Home() {
   );
 }
 
+const videoData = {
+  title: "HSE Video Preview",
+  description: "This test page should shows a preview of the video",
+  videoUrl: "https://metadata-image.vercel.app/prev.mp4",
+  thumbnailUrl: "https://metadata-image.vercel.app/previ_img.png",
+  duration: "5:27",
+  publishedAt: "2025-04-03",
+  width: 1920,
+  height: 1080,
+  tags: ["hse"]
+}
 
-export const metadata: Metadata = {
-  title: 'Unsere HSE Creator',
-  description:
-    'Für unsere Livestreams stehen die beliebtesten Persönlichkeiten und ausgesprochene Experten vor der Kamera. Jetzt unsere HSE Creator entdecken',
-  appleWebApp: {
-    startupImage: "https://www.hse.de/dpl/cf/gxqzdlfn45nk/44EPUSQHGsQqPZY9CxdkPq/095e31f8ae9c7a616461b2408f95c374/mod_14994_modewinter_bannermakeover_mc_20240801_navigationlayer_desk_2x.jpg?impolicy=content-view-policy&imwidth=640"
-  },
-  assets: ["https://www.hse.de/dpl/cf/gxqzdlfn45nk/44EPUSQHGsQqPZY9CxdkPq/095e31f8ae9c7a616461b2408f95c374/mod_14994_modewinter_bannermakeover_mc_20240801_navigationlayer_desk_2x.jpg?impolicy=content-view-policy&imwidth=640"],
-  openGraph: {
-    images: [
-      {
-        url: 'https://www.hse.de/dpl/cf/gxqzdlfn45nk/44EPUSQHGsQqPZY9CxdkPq/095e31f8ae9c7a616461b2408f95c374/mod_14994_modewinter_bannermakeover_mc_20240801_navigationlayer_desk_2x.jpg?impolicy=content-view-policy&imwidth=640', // Path relative to the public directory
-      },
-    ],
-  },
+export async function generateMetadata(): Promise<Metadata> {
+
+  return {
+    title: videoData.title,
+    description: videoData.description,
+    //metadataBase: new URL('https://metadata-image.vercel.app/'),
+    alternates: {
+      canonical: 'https://metadata-image.vercel.app',
+      media: {title: "direct Link", url: "https://metadata-image.vercel.app/prev.mp4"}
+    },
+    facebook: {
+      appId: '87741124305',
+    },
+    openGraph: {
+      title: videoData.title,
+      description: videoData.description,
+      type: 'video.other',
+      videos: [{
+            url: 'https://metadata-image.vercel.app/prev.mp4',
+            secureUrl: videoData.videoUrl,
+            width: videoData.width,
+            height: videoData.height,
+            type: 'video/mp4',
+          }],
+      siteName: 'HSE',
+      images: [{
+          url: 'https://metadata-image.vercel.app/previ_img.png',
+          width: 1200,
+          height: 630,
+          alt: `${videoData.title} - Taught by Me`,
+        }],
+      url: 'https://metadata-image.vercel.app/*',
+    },
+    other: {
+      'og:video:url': 'https://metadata-image.vercel.app/prev.mp4',
+      'og:video:secure_url': 'https://metadata-image.vercel.app/prev.mp4',
+    }
+  }
 }
