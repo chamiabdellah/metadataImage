@@ -95,11 +95,7 @@ export default function Home() {
       <Script
       id="post-structured-data"
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: dompurify.sanitize(JSON.stringify( {"@context":"https://schema.org","@type":"Article",
-        "headline":"⭐️GLOW UP YOUR LIFE⭐️ Beauty💋 Hair 💇‍♀️ Fashion\ud83d","name":"⭐️GLOW UP YOUR LIFE⭐️ Beauty💋 Hair 💇‍♀️ Fashion\ud83d",
-        "description":"⭐️GLOW UP YOUR LIFE⭐️ Beauty💋 Hair 💇‍♀️ Fashion👗",
-        "image":"https://qas.hse.de/dpl/files/streamer/streamer/fb4be2d1-5f4e-4e7f-a585-f37df74ae88f/image-posts/f1f34195-788b-4202-90da-656069f7b24b/2025_06_12_15_12_27_35788f8021de4a93919b3797cd82b423.png"
-      })).replace('\ud83d', ' ') }}
+      dangerouslySetInnerHTML={{ __html: dompurify.sanitize(JSON.stringify( {"@context":"https://schema.org","@type":"Article","headline":"Blaubeerwaffel selbstgemacht 😋 Mmmh ...lecker!","name":"Blaubeerwaffel selbstgemacht 😋 Mmmh ...lecker!","description":"Blaubeerwaffel selbstgemacht 😋 Mmmh ...lecker! 🧇 in Rekordzeit 5 cm hohe, gefüllte Waffeln backen 🧇 Anti-Haft-beschichtete Waffelplatten 🧇 automatische Temperaturregelung","image":"https://qas.hse.de/dpl/files/streamer/streamer/11def651-e148-494d-8e4a-bea98016f2f9/image-posts/43d901cc-c055-41d6-a447-f92d05cb6f12/2025_06_12_16_19_46_64d1d0720ede4996952f164a647d281e.png"})).replace(/&nbsp;/g, ' ') }}
       />
     </div>
         </>
