@@ -99,7 +99,7 @@ export default function Home() {
         "headline":"⭐️GLOW UP YOUR LIFE⭐️ Beauty💋 Hair 💇‍♀️ Fashion\ud83d","name":"⭐️GLOW UP YOUR LIFE⭐️ Beauty💋 Hair 💇‍♀️ Fashion\ud83d",
         "description":"⭐️GLOW UP YOUR LIFE⭐️ Beauty💋 Hair 💇‍♀️ Fashion👗",
         "image":"https://qas.hse.de/dpl/files/streamer/streamer/fb4be2d1-5f4e-4e7f-a585-f37df74ae88f/image-posts/f1f34195-788b-4202-90da-656069f7b24b/2025_06_12_15_12_27_35788f8021de4a93919b3797cd82b423.png"
-      })).replace(/&nbsp;/g, ' ') }}
+      })).replace('\ud83d', ' ') }}
       />
     </div>
         </>
