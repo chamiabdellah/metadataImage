@@ -96,8 +96,8 @@ export default function Home() {
       id="post-structured-data"
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: dompurify.sanitize(JSON.stringify( {"@context":"https://schema.org",
-    "@type":"Article","headline":"Das ging ja viel zu schnell vorbei. Schön war’s. \ud83d",
-    "name":"Das ging ja viel zu schnell vorbei. Schön war’s. \ud83d",
+    "@type":"Article","headline":"Das ging ja viel zu schnell vorbei. Schön war’s. \ud83d\udc4d",
+    "name":"Das ging ja viel zu schnell vorbei. Schön war’s. \ud83d\udc4d",
     "description":"Das ging ja viel zu schnell vorbei. Schön war’s. 👍🏻 Fühlt Euch ganz lieb gedrückt. 🤗❤️  Euer Steffen",
     "image":"https://www.hse.de/dpl/files/streamer/streamer/1570ac78-35ac-45ec-bfa4-dbe100c98e2a/image-posts/7a194b88-f7c0-4d0f-984a-0aafd10ed3a9/2025_06_06_11_13_04_7956cb428c4b4d52a46a5aab7dc222c0.jpeg"
   })).replace(/&nbsp;/g, ' ') }}
